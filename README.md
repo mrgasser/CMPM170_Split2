@@ -36,3 +36,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 * Amazing pixelart from [Nate Kling](https://twitter.com/natekling)
+
+## GitHup Pages
+https://mrgasser.github.io/CMPM170_Split2/
