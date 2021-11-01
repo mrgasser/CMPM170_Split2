@@ -4614,7 +4614,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213030893}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c91d0ac26d3254a488b22837d2a4863a, type: 3}
   m_Name: 
@@ -4625,11 +4625,12 @@ MonoBehaviour:
   wallSlide: 0
   isDashing: 0
   rb: {fileID: 0}
-  speed: 10
-  jumpForce: 50
-  slideSpeed: 5
+  speed: 5
+  jumpForce: 15
+  slideSpeed: 2
   wallJumpLerp: 10
-  dashSpeed: 20
+  dashSpeed: 50
+  climbStamina: 10
   side: 1
   dashParticle: {fileID: 786101203}
   jumpParticle: {fileID: 708599380}
@@ -4642,7 +4643,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213030893}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ad19687ee044489c914130b14302661, type: 3}
   m_Name: 

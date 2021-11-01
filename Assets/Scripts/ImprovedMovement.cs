@@ -17,6 +17,7 @@ public class ImprovedMovement : Movement {
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
     public float dashSpeed = 20;
+    public float climbStamina = 10; // for climbing stamina?
 
     [Space]
 
@@ -90,7 +91,7 @@ public class ImprovedMovement : Movement {
         if(coll.onWall && !coll.onGround)
         {
             if (x != 0 && !wallGrab)
-            {
+            {   
                 wallSlide = true;
                 WallSlide();
             }
@@ -113,7 +114,10 @@ public class ImprovedMovement : Movement {
         {
             if(xRaw != 0 || yRaw != 0)
                 Dash(xRaw, yRaw);
-        }
+            else { // if player not moving dash in the direction their facing
+                Dash(side, 0); 
+            }
+        } 
 
         if (coll.onGround && !groundTouch)
         {
@@ -233,7 +237,9 @@ public class ImprovedMovement : Movement {
         }
         float push = pushingWall ? 0 : rb.velocity.x;
 
-        rb.velocity = new Vector2(push, -slideSpeed);
+        //Fixed momentum from stopping when colliding with a wall
+        float y_speed = rb.velocity.y > 0 ? rb.velocity.y : -slideSpeed; 
+        rb.velocity = new Vector2(push, y_speed);
     }
 
     private void Walk(Vector2 dir)
